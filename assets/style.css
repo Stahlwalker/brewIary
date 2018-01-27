@@ -1,0 +1,207 @@
+body {
+    /* background: blue; */
+    background-image: url('images/beer3.jpg');
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.jumbotron {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: zoomInDown;
+    background-color: #2f3233;
+    color: white;
+    margin-top: 50px;
+    padding: 5px;
+    padding-bottom: 15px;
+    text-align: left;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.panel-panel-danger{
+    color: rgba(234, 192, 37, 0.68);
+}
+
+#image {
+    text-align: right;
+}
+
+.panel {
+    background-color: #3d4041;
+    color:rgba(234, 192, 37, 0.68);
+}
+
+#footer {
+    background-color: #2f3233;
+    color: rgba(234, 192, 37, 0.68);
+    text-align: center;
+    padding: 10px;
+    opacity: 0.8;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 25px;
+   }
+
+.panel-body2 {
+    padding: 10px;
+}
+
+th {
+    padding-right: 195px;
+}
+
+
+/* module */
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: rgb(74, 163, 236);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: 50%;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+
+.container1 {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 50%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 50%;
+    }
+}
+
+.modal-backdrop.in {
+    filter: alpha(opacity=50);
+    opacity: -0.5;
+}
+
+#beer-info {
+    background-color: #2f3233;
+    color: rgba(234, 192, 37, 0.68)
+}
+
+#beer-close {
+    color: rgba(234, 192, 37, 0.68)
+}
+
+#beer-section{
+    max-height: 300px;
+    overflow-y:scroll;
+    
+ }
+
+ #beer-section2{
+    max-height: 300px;
+    overflow-y:scroll;
+    
+ }

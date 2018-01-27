@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>brewIary</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+   <!-- Firebase Reference -->
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+  <!-- Annimate CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Jumbotron for Title -->
+    <div class="jumbotron">
+      <h1>
+        <strong>
+          <img src="assets/images/brewIary Logo3.png" alt="...">
+          <span id="image">
+            <img src="assets/images/craftbeer.jpg" alt="..." align="right" class="img-circle">
+          </span>
+        </strong>
+      </h1>
+      <p>Remember a good time, CHEERS!</p>
+
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <br>
+
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <strong>
+                </i> Search Your Beer</strong>
+            </h3>
+          </div>
+          <div class="panel-body">
+
+            <form role="form">
+
+              <div class="form-group">
+                <label for="style">Beer Name:</label>
+                <input type="text" class="form-control" id="beer-style">
+              </div>
+
+              <button type="submit" class="btn btn-warning" id="run-search">
+                </i> Search</button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div id="map"></div>
+      </div>
+      <!-- <div class="image">
+        <img src="assets/images/ingredients.png" alt="..." align="right" class="img-rounded">
+      </div> -->
+    </div>
+
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Register</button>
+
+    <div id="id01" class="modal">
+
+      <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+
+        <div class="container1">
+          <label>
+            <b>Username</b>
+          </label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+          <br>
+          <label>
+            <b>Password</b>
+          </label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <label><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    
+
+          <button type="submit">Register</button>
+          <label>
+            <input type="checkbox" checked="checked"> Remember me
+          </label>
+        </div>
+
+        <div class="container1" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot
+            <a href="#">password?</a>
+          </span>
+        </div>
+      </form>
+    </div>
+
+    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
+
+    <div id="id02" class="modal">
+
+      <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+
+        <div class="container1">
+          <label>
+            <b>Username</b>
+          </label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+          <br>
+          <label>
+            <b>Password</b>
+          </label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked"> Remember me
+          </label>
+        </div>
+
+        <div class="container1" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot
+            <a href="#">password?</a>
+          </span>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-12">
+        <br>
+
+        <!-- This panel will initially be made up of a panel and wells for each of the articles retrieved -->
+        <div class="panel panel-warning">
+
+          <!-- Panel Heading for the retrieved articles box -->
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <strong>
+                </i> Top Brews</strong>
+            </h3>
+          </div>
+
+          <!--//Hold each of the resulting options -->
+          <div class="panel-body2" id="beer-section">
+            <table class="table" id="beer-table">
+              <thead>
+                <tr>
+                  <th>Beer Name</th>
+                  <th>Brewery</th>
+                  <th>ABV</th>
+                  <th>Beer Style</th>
+                  <th>Glass Type</th>
+                </tr>
+              </thead>
+
+              <tbody id="beer-body"></tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+   
+  
+    <div class="row">
+      <div class="col-sm-12">
+        <br>
+
+        <!-- This panel will initially be made up of a panel and wells for each of the articles retrieved -->
+        <div class="panel panel-warning">
+
+          <!-- Panel Heading for the retrieved articles box -->
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <strong>
+                </i> Current Favorites</strong>
+            </h3>
+          </div>
+
+          <!--//Hold each of the resulting options -->
+          <div class="panel-body2" id="beer-section2">
+            <table class="table" id="beer-table2">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Where'd ya get it?</th>
+                  <th>What'd ya think?</th>
+                </tr>
+              </thead>
+
+              <tbody id="beer-body2"><div class="col-lg-4" id = "name-favorites"></div>
+                <div class="col-lg-4" id = "location-favorites"></div>
+                <div class="col-lg-4" id = "thoughts-favorites"></div></tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+     
+
+      <!-- Add an Employee -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-warning">
+            <div class="panel-heading">
+              <h3 class="panel-title">Add Beer</h3>
+            </div>
+            <div class="panel-body">
+              <form>
+                <div class="form-group">
+                  <label for="beer-name">Beer Name</label>
+                  <input class="form-control" id="beer-name" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="location">Where'd ya get it?</label>
+                  <input class="form-control" id="location" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="your-thoughts">What'd ya think?</label>
+                  <input class="form-control" id="your-thoughts" type="text">
+                </div>
+  
+                <button class="btn btn-warning" id="add-employee" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+    <!-- Footer Region -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="footer">
+          <img src="assets/images/brewIary Logo3.png" alt="...">
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+<!-- The Modal -->
+<div id="beer-popup" class="modal">
+     
+  <!-- Modal content -->
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span id="beer-close" class="close" title="Close Modal">&times;</span>
+    </div>
+    
+    <div id="beer-info"></div>
+  </form>  
+    
+</div>
+
+
+  <script type="text/javascript" src="app.js"></script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRoBFgQ8l2qx8Q5JVqkyWcqc3SqcGBuBY&callback=initMap">
+  </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
