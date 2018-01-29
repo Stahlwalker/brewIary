@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-   <!-- Firebase Reference -->
-<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="assets/style.css">
@@ -71,9 +71,7 @@
       <div class="col-sm-6">
         <div id="map"></div>
       </div>
-      <!-- <div class="image">
-        <img src="assets/images/ingredients.png" alt="..." align="right" class="img-rounded">
-      </div> -->
+
     </div>
 
     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Register</button>
@@ -96,9 +94,11 @@
           </label>
           <input type="password" placeholder="Enter Password" name="psw" required>
 
-          <label><b>Repeat Password</b></label>
-        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-    
+          <label>
+            <b>Repeat Password</b>
+          </label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
 
           <button type="submit">Register</button>
           <label>
@@ -191,8 +191,8 @@
     </div>
 
 
-   
-  
+
+
     <div class="row">
       <div class="col-sm-12">
         <br>
@@ -219,9 +219,11 @@
                 </tr>
               </thead>
 
-              <tbody id="beer-body2"><div class="col-lg-4" id = "name-favorites"></div>
-                <div class="col-lg-4" id = "location-favorites"></div>
-                <div class="col-lg-4" id = "thoughts-favorites"></div></tbody>
+              <tbody id="beer-body2">
+                <div class="col-lg-4" id="name-favorites"></div>
+                <div class="col-lg-4" id="location-favorites"></div>
+                <div class="col-lg-4" id="thoughts-favorites"></div>
+              </tbody>
             </table>
           </div>
 
@@ -231,36 +233,36 @@
 
 
     </div>
-     
 
-      <!-- Add an Employee -->
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="panel panel-warning">
-            <div class="panel-heading">
-              <h3 class="panel-title">Add Beer</h3>
-            </div>
-            <div class="panel-body">
-              <form>
-                <div class="form-group">
-                  <label for="beer-name">Beer Name</label>
-                  <input class="form-control" id="beer-name" type="text">
-                </div>
-                <div class="form-group">
-                  <label for="location">Where'd ya get it?</label>
-                  <input class="form-control" id="location" type="text">
-                </div>
-                <div class="form-group">
-                  <label for="your-thoughts">What'd ya think?</label>
-                  <input class="form-control" id="your-thoughts" type="text">
-                </div>
-  
-                <button class="btn btn-warning" id="add-employee" type="submit">Submit</button>
-              </form>
-            </div>
+
+    <!-- Add Beer -->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <h3 class="panel-title">Add Beer</h3>
+          </div>
+          <div class="panel-body">
+            <form>
+              <div class="form-group">
+                <label for="beer-name">Beer Name</label>
+                <input class="form-control" id="beer-name" type="text">
+              </div>
+              <div class="form-group">
+                <label for="location">Where'd ya get it?</label>
+                <input class="form-control" id="location" type="text">
+              </div>
+              <div class="form-group">
+                <label for="your-thoughts">What'd ya think?</label>
+                <input class="form-control" id="your-thoughts" type="text">
+              </div>
+
+              <button class="btn btn-warning" id="add-beer" type="submit">Submit</button>
+            </form>
           </div>
         </div>
       </div>
+    </div>
 
 
 
@@ -279,19 +281,19 @@
 
   </div>
 
-<!-- The Modal -->
-<div id="beer-popup" class="modal">
-     
-  <!-- Modal content -->
-  <form class="modal-content animate" action="/action_page.php">
-    <div class="imgcontainer">
-      <span id="beer-close" class="close" title="Close Modal">&times;</span>
-    </div>
-    
-    <div id="beer-info"></div>
-  </form>  
-    
-</div>
+  <!-- The Modal -->
+  <div id="beer-popup" class="modal">
+
+    <!-- Modal content -->
+    <form class="modal-content animate" action="/action_page.php">
+      <div class="imgcontainer">
+        <span id="beer-close" class="close" title="Close Modal">&times;</span>
+      </div>
+
+      <div id="beer-info"></div>
+    </form>
+
+  </div>
 
 
   <script type="text/javascript" src="app.js"></script>
