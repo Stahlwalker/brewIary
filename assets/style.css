@@ -49,10 +49,21 @@ body {
     padding: 10px;
 }
 
+.panel-body3 {
+    padding: 10px;
+}
+
 th {
     padding-right: 195px;
 }
 
+input {
+    line-height: normal;
+    width: 100%;
+    padding: 11px;
+    padding-left: 19px;
+    color: black;
+}
 /* module */
 
 /* Full-width input fields */
