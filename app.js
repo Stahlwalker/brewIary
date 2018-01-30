@@ -253,7 +253,17 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     }
 });
 
+$("#btnLogin").on("click", function (event) {
+    $("#txtEmail").val("");
+    $("#txtPassword").val("");
 
+});
+
+$("#btnSignUp").on("click", function (event) {
+    $("#txtEmail").val("");
+    $("#txtPassword").val("");
+
+});
 
 // Create a variable to reference the database.
 var database = firebase.database();
