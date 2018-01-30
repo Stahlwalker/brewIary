@@ -1,5 +1,4 @@
 body {
-    /* background: blue; */
     background-image: url('images/beer3.jpg');
     font-family: 'ELEGANT_TYPEWRITER';
 }
@@ -72,8 +71,6 @@ input {
     color: black;
 }
 
-/* module */
-
 /* Full-width input fields */
 
 input[type=text],
@@ -85,8 +82,6 @@ input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-
-/* Set a style for all buttons */
 
 button {
     background-color: rgb(74, 163, 236);
@@ -101,8 +96,6 @@ button {
 button:hover {
     opacity: 0.8;
 }
-
-/* Center the image and position the close button */
 
 .imgcontainer {
     text-align: center;
@@ -143,15 +136,11 @@ span.psw {
     padding-top: 60px;
 }
 
-/* Modal Content/Box */
-
 .modal-content {
     background-color: #fefefe;
     margin: 5% auto 15% auto;
-    /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     width: 80%;
-    /* Could be more or less, depending on screen size */
 }
 
 .modal-backdrop.in {

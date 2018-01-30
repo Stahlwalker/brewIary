@@ -57,7 +57,7 @@ $("#run-search").on("click", function () {
 
 });
 
-//Code for the Google Map is below, used brwery location information from
+//Code for the Google Map is below, used brewery location information from
 //the BreweryDB
 
 var map;
@@ -252,7 +252,7 @@ $("#btnSignUp").on("click", function (event) {
 // Create a variable to reference the database.
 var database = firebase.database();
 
-// --------------------------------------------------------------
+
 // Whenever a user clicks the click `
 $("#add-beer").on("click", function (event) {
     event.preventDefault();
