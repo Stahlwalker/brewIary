@@ -57,10 +57,6 @@ $("#run-search").on("click", function () {
 
 });
 
-
-
-
-
 //Code for the Google Map is below, used brwery location information from
 //the BreweryDB
 
@@ -73,8 +69,6 @@ var geocoder;
 var placeID;
 var beerList = [];
 var latArr = [];
-
-
 
 function createMarker(beer) {
     var lat = beer.breweries[0].locations[0].latitude;
@@ -182,23 +176,13 @@ $(document).on("click", "tr", function () {
 
     document.getElementById('beer-popup').style.display = 'block';
 
-
-
-
 });
 
 $(document).on("click", "#beer-close", function () {
     document.getElementById('beer-popup').style.display = 'none'
 });
 
-// Get the user login modal
-var modal = document.getElementById('id01');
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+
 
 // Initialize Firebase
 var config = {
