@@ -4,7 +4,6 @@ jQuery.ajaxPrefilter(function (options) {
     }
 });
 
-
 $("#run-search").on("click", function () {
     event.preventDefault();
 
@@ -25,9 +24,6 @@ $("#run-search").on("click", function () {
     }).done(function (response) {
         console.log(response);
         var beers = response.data;
-
-
-
         console.log(beers[0].breweries[0].name);
 
         var count = 0;
@@ -145,11 +141,9 @@ function initMap() {
 $(document).on("mouseover", "tr", function () {
 
     var id = $(this).attr('id');
-    // console.log(id);
     var place = latArr[id];
     map.setCenter(place);
     map.setZoom(10);
-
 
 });
 
@@ -172,8 +166,7 @@ $(document).on("click", "tr", function () {
     var beerDsc = $("<p>");
     beerDsc.text(beer.description);
     $('#beer-info').append(beerDsc);
-
-
+    
     document.getElementById('beer-popup').style.display = 'block';
 
 });
@@ -181,8 +174,6 @@ $(document).on("click", "tr", function () {
 $(document).on("click", "#beer-close", function () {
     document.getElementById('beer-popup').style.display = 'none'
 });
-
-
 
 // Initialize Firebase
 var config = {
@@ -201,8 +192,6 @@ const btnLogin = document.getElementById('btnLogin');
 const btnSignUp = document.getElementById('btnSignUp');
 const btnLogout = document.getElementById('btnLogout');
 
-
-
 btnLogin.addEventListener('click', e => {
     const email = txtEmail.value;
     const pass = txtPassword.value;
@@ -212,7 +201,6 @@ btnLogin.addEventListener('click', e => {
     promise.catch(e => console.log(e.message));
 });
 
-
 btnSignUp.addEventListener('click', e => {
     const email = txtEmail.value;
     const pass = txtPassword.value;
@@ -221,7 +209,6 @@ btnSignUp.addEventListener('click', e => {
     const promise = auth.createUserWithEmailAndPassword(email, pass);
     promise.catch(e => console.log(e.message));
 });
-
 
 btnLogout.addEventListener('click', e => {
     firebase.auth().signOut();
