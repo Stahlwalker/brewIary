@@ -244,7 +244,7 @@ btnLogout.addEventListener('click', e => {
 });
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
-    if(firebaseUser) {
+    if (firebaseUser) {
         console.log(firebaseUser);
         btnLogout.classList.remove('hide');
     } else {
@@ -341,9 +341,7 @@ $("#add-beer").on("click", function (event) {
 //     }
 // }
 
-$("#beer-name").val("");
-$("#location").val("");
-$("#your-thoughts").val("");
+
 
 database.ref().on("child_added", function (childSnapshot) {
 
@@ -353,3 +351,10 @@ database.ref().on("child_added", function (childSnapshot) {
     $("#beer-table2 > tbody").append("<tr><td>" + childSnapshot.val().beerName + "</td><td>" + childSnapshot.val().location + "</td><td>" + childSnapshot.val().thoughts + "</td></tr>");
 
 }, function (errorObject) {});
+
+$("#add-beer").on("click", function (event) {
+    $("#beer-name").val("");
+    $("#location").val("");
+    $("#your-thoughts").val("");
+
+});
