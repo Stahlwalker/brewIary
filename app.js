@@ -151,7 +151,7 @@ function initMap() {
 $(document).on("mouseover", "tr", function () {
 
     var id = $(this).attr('id');
-    console.log(id);
+    // console.log(id);
     var place = latArr[id];
     map.setCenter(place);
     map.setZoom(10);

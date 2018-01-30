@@ -1,7 +1,12 @@
 body {
     /* background: blue; */
     background-image: url('images/beer3.jpg');
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'linowrite';
+}
+
+@font-face {
+    font-family: linowrite;
+    src: url(linowrite.ttf);
 }
 
 .jumbotron {
