@@ -1,12 +1,12 @@
 body {
     /* background: blue; */
     background-image: url('images/beer3.jpg');
-    font-family: 'linowrite';
+    font-family: 'ELEGANT_TYPEWRITER';
 }
 
 @font-face {
-    font-family: linowrite;
-    src: url(linowrite.ttf);
+    font-family: ELEGANT_TYPEWRITER;
+    src: url(ELEGANT_TYPEWRITER.ttf);
 }
 
 .jumbotron {
@@ -56,6 +56,7 @@ body {
 
 .panel-body3 {
     padding: 10px;
+    color: black;
 }
 
 th {
@@ -67,6 +68,10 @@ input {
     width: 100%;
     padding: 11px;
     padding-left: 19px;
+    color: black;
+}
+
+.txtPassword {
     color: black;
 }
 /* module */
