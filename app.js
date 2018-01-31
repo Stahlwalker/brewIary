@@ -256,3 +256,10 @@ $("#add-beer").on("click", function (event) {
 
     }
 });
+
+
+$("#add-beer").on("click", function (event) {
+    $("#beer-name").val("");
+    $("#location").val("");
+    $("#your-thoughts").val("");
+});
