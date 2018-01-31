@@ -147,13 +147,13 @@ $(document).on("click", "#beer-close", function () {
 
 // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyAm_nwrEHI-HAzrUa-YiRCMbcuoA24x7vA",
-    authDomain: "breweryproject-223c8.firebaseapp.com",
-    databaseURL: "https://breweryproject-223c8.firebaseio.com",
-    projectId: "breweryproject-223c8",
-    storageBucket: "breweryproject-223c8.appspot.com",
-    messagingSenderId: "675321245147"
-};
+    apiKey: "AIzaSyC_B1Ocq23JwTvXP4cSlaCEYHe5TqR1220",
+    authDomain: "personal-firebase-8c99a.firebaseapp.com",
+    databaseURL: "https://personal-firebase-8c99a.firebaseio.com",
+    projectId: "personal-firebase-8c99a",
+    storageBucket: "personal-firebase-8c99a.appspot.com",
+    messagingSenderId: "71144171999"
+  };
 
 firebase.initializeApp(config);
 
