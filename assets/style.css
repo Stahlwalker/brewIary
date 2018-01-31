@@ -93,6 +93,13 @@ button {
     width: 50%;
 }
 
+.btn-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    width: 20%;
+}
+
 button:hover {
     opacity: 0.8;
 }
